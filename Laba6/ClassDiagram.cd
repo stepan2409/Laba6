@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Laba6.DiscountClient">
+    <Position X="1.75" Y="6.25" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAEEAAABAQAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DiscountClient.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="3.283" />
+  </Class>
+  <Class Name="Laba6.SimpleClient">
+    <Position X="7.75" Y="6.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAEEAAABAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SimpleClient.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Laba6.Fare">
+    <Position X="7.75" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Fare.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Laba6.Operator">
+    <Position X="0.5" Y="0.5" Width="7.25" />
+    <AssociationLine Name="clients" Type="Laba6.IClient" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.625" Y="3.853" />
+        <Point X="2.625" Y="4.875" />
+        <Point X="4.75" Y="4.875" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="fares" Type="Laba6.Fare" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="1.975" />
+        <Point X="8.812" Y="1.975" />
+        <Point X="8.812" Y="3.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>gAAAAEBAAAAAAAAABBAAAgAgBAAAAAAAAAAiBAAAAAA=</HashCode>
+      <FileName>Operator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="clients" />
+      <Field Name="fares" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Interface Name="Laba6.IClient">
+    <Position X="4.75" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEEAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IClient.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
