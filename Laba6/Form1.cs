@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -31,8 +32,14 @@ namespace Laba6
                 SpawnErrorBox("Тариф с таким названием уже существует");
                 return;
             }
+            if (!check(name))
+            {
+                SpawnErrorBox("В поле названия должны быть русские буквы");
+                return;
+            }
             if (decimal.TryParse(farePriceTextBox.Text.Trim(), out decimal value) && value > 0)
             {
+                value = Math.Round(value, 2);
                 Operator.GetInstance().AddFare(name, value);
                 fareListBox.DataSource = Operator.GetInstance().FareStringList;
                 fareComboBox.DataSource = Operator.GetInstance().FareNamesStringList;
@@ -55,6 +62,11 @@ namespace Laba6
                 SpawnErrorBox("Клиент с таким именем уже существует");
                 return;
             }
+            if (!check(name))
+            {
+                SpawnErrorBox("В поле имени должны быть русские буквы");
+                return;
+            }
             string fareName = fareComboBox.Text.Trim();
             if (!Operator.GetInstance().FareNamesStringList.Contains(fareName))
             {
@@ -64,14 +76,22 @@ namespace Laba6
 
             if (decimal.TryParse(usedTrafficTextBox.Text.Trim(), out decimal usedTraffic) && usedTraffic > 0)
             {
+                usedTraffic = Math.Round(usedTraffic, 6);
                 if (discountCheckBox.Checked)
                 {
-                    if (decimal.TryParse(discountTextBox.Text.Trim(), out decimal discount) && discount >= 0 && discount <= 100)
+                    if (decimal.TryParse(discountTextBox.Text.Trim(), out decimal discount) && discount >= 0 )
                     {
+                        discount = Math.Round(discount, 2);
+                        decimal farePrice = Operator.GetInstance().GetFarePrice(fareName);
+                        if (usedTraffic * farePrice - discount < 1)
+                        {
+                            SpawnErrorBox("Скидка слишком большая");
+                            return;
+                        }
                         Operator.GetInstance().AddClient(name, usedTraffic, fareName, true, discount);
                     } else
                     {
-                        SpawnErrorBox("В поле \"Скидка\" нужно ввести число от 0 до 100 включительно");
+                        SpawnErrorBox("В поле \"Скидка\" нужно ввести положительное число");
                         return;
                     }
                 }
@@ -92,6 +112,11 @@ namespace Laba6
             label5.Enabled = discountCheckBox.Checked;
             discountTextBox.Enabled = discountCheckBox.Checked;
             label10.Enabled = discountCheckBox.Checked;
+        }
+
+        private bool check(string st)
+        {
+            return Regex.Match(st, @"[АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя]").Success;
         }
     }
 }

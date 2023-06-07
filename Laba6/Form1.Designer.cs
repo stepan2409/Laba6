@@ -88,6 +88,7 @@
             // 
             // fareComboBox
             // 
+            this.fareComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.fareComboBox.FormattingEnabled = true;
             this.fareComboBox.Location = new System.Drawing.Point(313, 247);
             this.fareComboBox.Name = "fareComboBox";
@@ -136,7 +137,7 @@
             this.discountTextBox.Enabled = false;
             this.discountTextBox.Location = new System.Drawing.Point(313, 360);
             this.discountTextBox.Name = "discountTextBox";
-            this.discountTextBox.Size = new System.Drawing.Size(272, 29);
+            this.discountTextBox.Size = new System.Drawing.Size(251, 29);
             this.discountTextBox.TabIndex = 10;
             this.discountTextBox.Text = "10";
             // 
@@ -224,14 +225,15 @@
             // 
             this.fareListBox.FormattingEnabled = true;
             this.fareListBox.ItemHeight = 24;
-            this.fareListBox.Location = new System.Drawing.Point(640, 41);
+            this.fareListBox.Location = new System.Drawing.Point(640, 17);
             this.fareListBox.Name = "fareListBox";
-            this.fareListBox.Size = new System.Drawing.Size(993, 244);
+            this.fareListBox.Size = new System.Drawing.Size(993, 268);
             this.fareListBox.TabIndex = 20;
             // 
             // clientListBox
             // 
             this.clientListBox.FormattingEnabled = true;
+            this.clientListBox.HorizontalScrollbar = true;
             this.clientListBox.ItemHeight = 24;
             this.clientListBox.Location = new System.Drawing.Point(640, 295);
             this.clientListBox.Name = "clientListBox";
@@ -242,11 +244,11 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Enabled = false;
-            this.label10.Location = new System.Drawing.Point(591, 363);
+            this.label10.Location = new System.Drawing.Point(574, 363);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(25, 24);
+            this.label10.Size = new System.Drawing.Size(46, 24);
             this.label10.TabIndex = 22;
-            this.label10.Text = "%";
+            this.label10.Text = "руб.";
             // 
             // Form1
             // 

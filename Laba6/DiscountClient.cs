@@ -25,12 +25,12 @@ namespace Laba6
 
         public decimal GetPrice()
         {
-            return UsedTraffic * Fare.Price * ((100 - DiscountSize) / 100);
+            return Math.Max(Math.Round(UsedTraffic * Fare.Price, 2) - DiscountSize, 0);
         }
 
         public override string ToString()
         {
-            return $"Имя: {Name}; Тариф {Fare.Name}; Использовано трафика: {UsedTraffic} Мбайт; Скидка {DiscountSize}% " +
+            return $"Имя: {Name}; Тариф {Fare.Name}; Использовано трафика: {UsedTraffic} Мбайт; Скидка {DiscountSize} руб. " +
                 $"Стоимость услуг: {this.GetPrice()} руб.";
         }
     }

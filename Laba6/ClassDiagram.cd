@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="Laba6.DiscountClient">
-    <Position X="1.75" Y="6.25" Width="5.25" />
+    <Position X="1.75" Y="6.5" Width="5.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAACAAAEEAAABAQAAAQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DiscountClient.cs</FileName>
@@ -17,7 +17,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Laba6.Fare">
-    <Position X="7.75" Y="3.75" Width="2.5" />
+    <Position X="8.25" Y="3.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Fare.cs</FileName>
@@ -27,20 +27,20 @@
     <Position X="0.5" Y="0.5" Width="7.25" />
     <AssociationLine Name="clients" Type="Laba6.IClient" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="2.625" Y="3.853" />
-        <Point X="2.625" Y="4.875" />
-        <Point X="4.75" Y="4.875" />
+        <Point X="2.625" Y="4.045" />
+        <Point X="2.625" Y="5.125" />
+        <Point X="4.75" Y="5.125" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="fares" Type="Laba6.Fare" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="7.75" Y="1.975" />
-        <Point X="8.812" Y="1.975" />
-        <Point X="8.812" Y="3.75" />
+        <Point X="7.75" Y="2.06" />
+        <Point X="9.312" Y="2.06" />
+        <Point X="9.312" Y="3.75" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>gAAAAEBAAAAAAAAABBAAAgAgBAAAAAAAAAAiBAAAAAA=</HashCode>
+      <HashCode>gAAAAEBAAAAAAABABBAAAgAgBAAAAAAAAAAiBAAAAAA=</HashCode>
       <FileName>Operator.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -49,7 +49,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Interface Name="Laba6.IClient">
-    <Position X="4.75" Y="4" Width="2.5" />
+    <Position X="4.75" Y="4.25" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEEAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IClient.cs</FileName>

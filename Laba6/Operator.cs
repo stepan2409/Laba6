@@ -17,6 +17,11 @@ namespace Laba6
             fares = new List<Fare> ();
         }
 
+        public decimal GetFarePrice(string name)
+        {
+            return fares.Find(fa => fa.Name == name).Price;
+        }
+
         public static Operator GetInstance()
         {
             if (currentInstance == null)

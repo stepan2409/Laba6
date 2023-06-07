@@ -22,7 +22,7 @@ namespace Laba6
 
         public decimal GetPrice()
         {
-            return UsedTraffic * Fare.Price;
+            return Math.Round(UsedTraffic * Fare.Price, 2);
         }
 
         public override string ToString()
